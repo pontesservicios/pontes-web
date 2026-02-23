@@ -34,11 +34,18 @@
     /* HEADER */
     header{
       background:#000;
-      padding:1rem 1.2rem;
+      padding:1.4rem 4rem;
       display:flex;
-      flex-direction:column;
+      justify-content:space-between;
       align-items:center;
-      justify-content:center;
+    }
+
+    @media (max-width:768px){
+      header{
+        padding:1rem;
+        flex-direction:column;
+        justify-content:center;
+      }
     }
 
     .logo-box{
@@ -84,8 +91,9 @@
 
     /* HERO CORPORATIVO */
     .hero{
-      min-height:75vh;
-      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('fondo.jpg');
+      min-height:80vh;
+      width:100%;
+      background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url('fondo.jpg');
       background-size:cover;
       background-position:center center;
       background-repeat:no-repeat;
@@ -94,9 +102,7 @@
       justify-content:center;
       text-align:center;
       color:white;
-      padding:2.5rem 1rem;
-      width:100%;
-      margin:0;
+      padding:3rem 1rem;
     }
 
     .hero-box{
@@ -390,11 +396,17 @@
       <input id="temail" type="email" placeholder="Email">
 
       <select id="tpuesto" required>
-        <option value="">Puesto</option>
-        <option>Albañil</option>
-        <option>Maquinista</option>
-        <option>Encargado</option>
-      </select>
+          <option value="">Puesto</option>
+          <option>Camionero</option>
+          <option>Maquinista</option>
+          <option>Administrativo</option>
+        </select>
+
+        <select id="tcarnet" required>
+          <option value="">Carnet de Camión y CAP en vigor</option>
+          <option>Sí</option>
+          <option>No</option>
+        </select>
 
       <textarea placeholder="Indique que enviará el CV por WhatsApp"></textarea>
 
