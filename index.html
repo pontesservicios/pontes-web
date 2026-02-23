@@ -17,6 +17,8 @@
     }
 
     body{
+      margin:0;
+      padding:0;
       color:#1a1a1a;
       line-height:1.7;
       background: linear-gradient(rgba(255,106,0,0.12), rgba(255,106,0,0.12));
@@ -36,10 +38,18 @@
     .logo-box{
       display:flex;
       align-items:center;
+      justify-content:center;
       gap:14px;
       color:white;
       font-weight:600;
       letter-spacing:.5px;
+      flex-direction:column;
+      text-align:center;
+    }
+
+    .logo-box span{
+      font-size:0.85rem;
+      white-space:nowrap;
     }
 
     .logo-box img{
@@ -78,7 +88,9 @@
       justify-content:center;
       text-align:center;
       color:white;
-      padding:2.5rem 1.2rem;
+      padding:2.5rem 1rem;
+      width:100%;
+      margin:0;
     }
 
     .hero-box{
@@ -102,6 +114,7 @@
       padding:3rem 1rem;
       max-width:1100px;
       margin:0 auto;
+      width:100%;
     }
     }
 
