@@ -112,13 +112,15 @@
       display:grid;
       grid-template-columns:repeat(2, 1fr);
       gap:2rem;
+      align-items:stretch;
     }
 
     /* GALERÍA GRID */
     .galeria-grid{
       display:grid;
       grid-template-columns:repeat(2, 1fr);
-      gap:1.5rem;
+      gap:1.2rem;
+      align-items:stretch;
     }
 
     /* RESPONSIVE */
@@ -157,9 +159,9 @@
 
     .card img{
       width:100%;
-      height:auto;
-      display:block;
+      aspect-ratio: 4 / 3;
       object-fit:cover;
+      display:block;
     }
 
     .card-content{
