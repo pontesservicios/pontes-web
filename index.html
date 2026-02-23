@@ -36,8 +36,67 @@
       background:#000;
       padding:1.4rem 4rem;
       display:flex;
-      justify-content:space-between;
       align-items:center;
+      justify-content:space-between;
+    }
+
+    .header-left{
+      flex:1;
+      text-align:left;
+      color:white;
+      font-weight:600;
+    }
+
+    .header-center{
+      flex:1;
+      display:flex;
+      justify-content:center;
+    }
+
+    .header-center img{
+      height:85px;
+    }
+
+    .header-right{
+      flex:1;
+      display:flex;
+      justify-content:flex-end;
+      gap:1rem;
+    }
+
+    .header-right a{
+      background:#ff6a00;
+      color:white;
+      padding:0.6rem 1.2rem;
+      border-radius:4px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:0.9rem;
+    }
+
+    @media (max-width:768px){
+      header{
+        flex-direction:column;
+        padding:1rem;
+      }
+
+      .header-left,
+      .header-center,
+      .header-right{
+        flex:none;
+        text-align:center;
+        justify-content:center;
+      }
+
+      .header-right{
+        margin-top:0.5rem;
+        flex-wrap:wrap;
+      }
+
+      .header-right a{
+        background:none;
+        padding:0;
+      }
     }
 
     .logo-box{
@@ -208,6 +267,12 @@
       }
     }
 
+    @media (max-width:768px){
+      .galeria-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
     /* RESPONSIVE */
     @media (max-width:768px){
       header{
@@ -349,16 +414,19 @@
 <body>
 
 <header>
-  <div class="logo-box">
-    <img src="logo.jpg" alt="Logo Pontes">
-    <span>PONTES SERVICIOS INTEGRALES S.XXI S.L</span>
+  <div class="header-left">
+    PONTES SERVICIOS INTEGRALES S.XXI S.L
   </div>
 
-  <nav>
+  <div class="header-center">
+    <img src="logo.jpg" alt="Logo Pontes">
+  </div>
+
+  <div class="header-right">
     <a href="#servicios">Servicios</a>
     <a href="#trabajo">Empleo</a>
-    <a href="#contratar">Contrataciones</a>
-  </nav>
+    <a href="#contratar">Contratación</a>
+  </div>
 </header>
 
 <section class="hero">
