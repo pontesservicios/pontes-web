@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Movimiento de Tierras y Obra Civil en Requena | Pontes Servicios Integrales S.XXI</title>
-<meta name="description" content="Empresa especializada en movimiento de tierras, excavaciones y obra civil en Requena y Valencia. Maquinaria pesada, camiones y equipo profesional. Solicita presupuesto o trabaja con nosotros.">
+<meta name="description" content="Empresa especializada en movimiento de tierras, excavaciones y obra civil en Requena y Valencia. Maquinaria pesada y equipo profesional.">
 <meta name="author" content="Pontes Servicios Integrales S.XXI S.L">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://pontesservicios.es/">
@@ -17,16 +17,35 @@
 <meta property="og:url" content="https://pontesservicios.es/">
 <meta property="og:image" content="https://pontesservicios.es/logo.jpg">
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"LocalBusiness",
+"name":"Pontes Servicios Integrales S.XXI S.L",
+"url":"https://pontesservicios.es",
+"telephone":"+34657653007",
+"address":{
+"@type":"PostalAddress",
+"streetAddress":"Calle Comercio 26",
+"addressLocality":"Requena",
+"addressRegion":"Valencia",
+"postalCode":"46340",
+"addressCountry":"ES"
+}
+}
+</script>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',Arial,sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 body{background:rgba(255,106,0,0.12);color:#1a1a1a;line-height:1.7;}
 
 header{background:#000;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;}
 .header-left{color:#fff;font-weight:600;}
 .header-center img{height:85px;}
+.header-right{display:flex;align-items:center;}
 .header-right a{background:#ff6a00;color:#fff;padding:.7rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:600;margin-left:1rem;}
 
 /* HERO PC */
@@ -41,6 +60,7 @@ align-items:center;
 justify-content:center;
 color:#fff;
 text-align:center;
+padding:2rem;
 }
 
 /* SOLO VERSION MOVIL */
@@ -54,12 +74,12 @@ padding:1rem;
 .header-right{
 display:flex;
 justify-content:center;
-gap:8px;
+gap:6px;
 margin-top:10px;
 }
 
 .header-right a{
-padding:6px 10px;
+padding:6px 8px;
 font-size:0.75rem;
 margin:0;
 }
@@ -166,6 +186,30 @@ PONTES SERVICIOS INTEGRALES SIGLO XXI, S.L., una empresa dedicada a ofrecer serv
 </p>
 </section>
 
+<section id="servicios">
+<h2 class="title">Servicios</h2>
+<div class="grid">
+<div class="card"><img src="movimientos.jpg"><div class="card-content"><h3>Movimientos de tierra</h3></div></div>
+<div class="card"><img src="obra-civil.jpg"><div class="card-content"><h3>Obra civil</h3></div></div>
+<div class="card"><img src="caminos.jpg"><div class="card-content"><h3>Reparación de caminos y parcelas</h3></div></div>
+<div class="card"><img src="agricolas.jpg"><div class="card-content"><h3>Trabajos agrícolas</h3></div></div>
+</div>
+</section>
+
+<section id="galeria">
+<h2 class="title">Galería de trabajos</h2>
+<div class="galeria-grid">
+<img src="foto1.jpg"><img src="foto2.jpg">
+<img src="foto3.jpg"><img src="foto4.jpg">
+<img src="foto5.jpg"><img src="foto6.jpg">
+<img src="foto7.jpg"><img src="foto8.jpg">
+<img src="foto9.jpg"><img src="foto10.jpg">
+<img src="foto11.jpg"><img src="foto12.jpg">
+<img src="foto13.jpg"><img src="foto14.jpg">
+<img src="foto15.jpg"><img src="foto16.jpg">
+</div>
+</section>
+
 <section id="trabajo">
 <h2 class="title">Solicitar empleo</h2>
 <div class="form-box">
@@ -192,6 +236,19 @@ PONTES SERVICIOS INTEGRALES SIGLO XXI, S.L., una empresa dedicada a ofrecer serv
 </div>
 </section>
 
+<section id="contratar">
+<h2 class="title">Solicitar servicios</h2>
+<div class="form-box">
+<form onsubmit="enviarCliente(event)">
+<input id="cnombre" type="text" placeholder="Nombre / Empresa" required>
+<input id="ctelefono" type="tel" placeholder="Teléfono" required>
+<input id="cemail" type="email" placeholder="Email">
+<textarea id="ctrabajo" placeholder="Describa el trabajo"></textarea>
+<button class="submit">Solicitar contacto</button>
+</form>
+</div>
+</section>
+
 <footer>
 <p>PONTES SERVICIOS INTEGRALES S.XXI S.L · Requena</p>
 <p>📧 serviciosintegrales@perezmontes.es</p>
@@ -211,10 +268,20 @@ Puesto: ${tpuesto.value}%0A
 Carnet de Camion y CAP en vigor: ${tcarnet.value}`;
 window.open(`https://wa.me/${numero}?text=${msg}`,'_blank');
 }
+function enviarCliente(e){
+e.preventDefault();
+const msg=`Solicitud de servicio:%0A
+Nombre: ${cnombre.value}%0A
+Teléfono: ${ctelefono.value}%0A
+Email: ${cemail.value}%0A
+Trabajo: ${ctrabajo.value}`;
+window.open(`https://wa.me/${numero}?text=${msg}`,'_blank');
+}
 </script>
 
 </body>
 </html>
+
 
 
 
