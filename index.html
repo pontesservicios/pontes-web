@@ -20,38 +20,22 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"LocalBusiness",
-"name":"Pontes Servicios Integrales S.XXI S.L",
-"url":"https://pontesservicios.es",
-"telephone":"+34657653007",
-"address":{
-"@type":"PostalAddress",
-"streetAddress":"Calle Comercio 26",
-"addressLocality":"Requena",
-"addressRegion":"Valencia",
-"postalCode":"46340",
-"addressCountry":"ES"
-},
-"areaServed":"España"
-}
-</script>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',Arial,sans-serif;}
 body{background:rgba(255,106,0,0.12);color:#1a1a1a;line-height:1.7;}
+
 header{background:#000;padding:1.4rem 4rem;display:flex;align-items:center;justify-content:space-between;}
 .header-left{color:#fff;font-weight:600;}
 .header-center img{height:85px;}
 .header-right a{background:#ff6a00;color:#fff;padding:.7rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:600;margin-left:1rem;}
 
+/* HERO PC */
 .hero{
 min-height:80vh;
 background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('fondo.jpg');
 background-size:cover;
-background-position:center;
+background-position:center center;
+background-repeat:no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -59,12 +43,37 @@ color:#fff;
 text-align:center;
 }
 
+/* SOLO VERSION MOVIL */
 @media(max-width:768px){
-header{flex-direction:column;text-align:center;}
-.header-right{margin-top:10px;}
+
+header{
+flex-direction:column;
+padding:1rem;
+}
+
+.header-right{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:10px;
+}
+
+.header-right a{
+padding:6px 10px;
+font-size:0.75rem;
+margin:0;
+}
+
 .hero{
 background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('fondo-movil.jpg');
+background-size:cover;
+background-position:center center;
+background-repeat:no-repeat;
 }
+
+.grid{grid-template-columns:1fr;}
+.galeria-grid{grid-template-columns:1fr;}
+.galeria-grid img{height:230px;}
 }
 
 section{max-width:1100px;margin:auto;padding:4rem 1rem;}
@@ -78,20 +87,59 @@ section{max-width:1100px;margin:auto;padding:4rem 1rem;}
 .galeria-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
 .galeria-grid img{width:100%;height:280px;object-fit:cover;border-radius:10px;}
 
-@media(max-width:768px){
-.grid{grid-template-columns:1fr;}
-.galeria-grid{grid-template-columns:1fr;}
-.galeria-grid img{height:230px;}
+.form-box{
+background:#0f0f0f;
+padding:3rem;
+border-radius:12px;
+max-width:700px;
+margin:2rem auto;
+color:#fff;
+display:flex;
+justify-content:center;
 }
 
-.form-box{background:#0f0f0f;padding:3rem;border-radius:12px;max-width:700px;margin:2rem auto;color:#fff;display:flex;justify-content:center;}
-.form-box form{width:100%;max-width:500px;display:flex;flex-direction:column;gap:1rem;}
-input,select,textarea{padding:1rem;border:none;border-radius:6px;}
-.submit{background:#ff6a00;color:#fff;padding:1rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;}
+.form-box form{
+width:100%;
+max-width:500px;
+display:flex;
+flex-direction:column;
+gap:1rem;
+}
+
+.form-box label{
+font-weight:600;
+font-size:0.9rem;
+}
+
+input,select,textarea{
+padding:1rem;
+border:none;
+border-radius:6px;
+}
+
+.submit{
+background:#ff6a00;
+color:#fff;
+padding:1rem;
+border:none;
+border-radius:6px;
+font-weight:700;
+cursor:pointer;
+}
 
 footer{background:#000;color:#fff;text-align:center;padding:2rem;margin-top:4rem;}
 
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:600;}
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
 </style>
 </head>
 
@@ -118,30 +166,6 @@ PONTES SERVICIOS INTEGRALES SIGLO XXI, S.L., una empresa dedicada a ofrecer serv
 </p>
 </section>
 
-<section id="servicios">
-<h2 class="title">Servicios</h2>
-<div class="grid">
-<div class="card"><img src="movimientos.jpg"><div class="card-content"><h3>Movimientos de tierra</h3></div></div>
-<div class="card"><img src="obra-civil.jpg"><div class="card-content"><h3>Obra civil</h3></div></div>
-<div class="card"><img src="caminos.jpg"><div class="card-content"><h3>Reparación de caminos y parcelas</h3></div></div>
-<div class="card"><img src="agricolas.jpg"><div class="card-content"><h3>Trabajos agrícolas</h3></div></div>
-</div>
-</section>
-
-<section id="galeria">
-<h2 class="title">Galería de trabajos</h2>
-<div class="galeria-grid">
-<img src="foto1.jpg"><img src="foto2.jpg">
-<img src="foto3.jpg"><img src="foto4.jpg">
-<img src="foto5.jpg"><img src="foto6.jpg">
-<img src="foto7.jpg"><img src="foto8.jpg">
-<img src="foto9.jpg"><img src="foto10.jpg">
-<img src="foto11.jpg"><img src="foto12.jpg">
-<img src="foto13.jpg"><img src="foto14.jpg">
-<img src="foto15.jpg"><img src="foto16.jpg">
-</div>
-</section>
-
 <section id="trabajo">
 <h2 class="title">Solicitar empleo</h2>
 <div class="form-box">
@@ -149,29 +173,21 @@ PONTES SERVICIOS INTEGRALES SIGLO XXI, S.L., una empresa dedicada a ofrecer serv
 <input id="tnombre" type="text" placeholder="Nombre" required>
 <input id="ttelefono" type="tel" placeholder="Teléfono" required>
 <input id="temail" type="email" placeholder="Email" required>
+
+<label>Puesto</label>
 <select id="tpuesto" required>
 <option>Camionero</option>
 <option>Administrativo</option>
 <option>Maquinista</option>
 </select>
+
+<label>Carnet de Camion y CAP en vigor</label>
 <select id="tcarnet" required>
 <option>Sí</option>
 <option>No</option>
 </select>
-<button class="submit">Enviar solicitud</button>
-</form>
-</div>
-</section>
 
-<section id="contratar">
-<h2 class="title">Solicitar servicios</h2>
-<div class="form-box">
-<form onsubmit="enviarCliente(event)">
-<input id="cnombre" type="text" placeholder="Nombre / Empresa" required>
-<input id="ctelefono" type="tel" placeholder="Teléfono" required>
-<input id="cemail" type="email" placeholder="Email">
-<textarea id="ctrabajo" placeholder="Describa el trabajo"></textarea>
-<button class="submit">Solicitar contacto</button>
+<button class="submit">Enviar solicitud</button>
 </form>
 </div>
 </section>
@@ -195,18 +211,10 @@ Puesto: ${tpuesto.value}%0A
 Carnet de Camion y CAP en vigor: ${tcarnet.value}`;
 window.open(`https://wa.me/${numero}?text=${msg}`,'_blank');
 }
-function enviarCliente(e){
-e.preventDefault();
-const msg=`Solicitud de servicio:%0A
-Nombre: ${cnombre.value}%0A
-Teléfono: ${ctelefono.value}%0A
-Email: ${cemail.value}%0A
-Trabajo: ${ctrabajo.value}`;
-window.open(`https://wa.me/${numero}?text=${msg}`,'_blank');
-}
 </script>
 
 </body>
 </html>
+
 
 
